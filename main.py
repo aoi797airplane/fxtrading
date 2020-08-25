@@ -11,12 +11,4 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
 
 if __name__ == '__main__':
-    api_client = APIClient(settings.access_token, settings.account_id)
-
-    order = Order(
-        product_code=settings.product_code,
-        side='SELL',
-        units=10,
-    )
-
-    api_client.send_order(order)
+    import app.models
